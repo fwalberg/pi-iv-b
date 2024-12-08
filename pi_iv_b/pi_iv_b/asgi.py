@@ -1,5 +1,5 @@
 """
-ASGI config for pi_ib_b project.
+ASGI config for pi_iv_b project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pi_ib_b.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pi_iv_b.settings')
 
 application = get_asgi_application()
