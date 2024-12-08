@@ -40,7 +40,9 @@
         <h1>Site Monitor</h1>
     </div>
     <div class="botoes">
-        <a href="http://146.235.37.219:8000/monitoramento/status/" class="botao">Status Web</a>
-        <a href="http://146.235.37.219:8000/monitoramento/api/status" class="botao">Status JSON</a>
+<!--        <a href="http://146.235.37.219:8000/monitoramento/status/" class="botao">Status Web</a>-->
+<!--        <a href="http://146.235.37.219:8000/monitoramento/api/status" class="botao">Status JSON</a>-->
+        <a href="{% url 'status_web' %}" class="botao">Status Web</a>
+        <a href="{% url 'status_web' %}" class="botao">Status JSON</a>
     </div>
 </html>
