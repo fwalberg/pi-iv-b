@@ -8,6 +8,7 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin-top: 50px;
+            background-color: #197d80;
         }
         .status {
             font-size: 1.5em;
@@ -19,17 +20,30 @@
         .status.error {
             color: red;
         }
+        .container {
+            width: 40%;
+            height: 50%;
+            background-color: #c9f19e;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 10px;
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Status do Site</h1>
-    <div class="status {% if http_code == 200 %}success{% else %}error{% endif %}">
-        <p>Url: {{ url }}</p>
-        <p>Status: {{ status }}</p>
-        <p>Código http: {{ http_code }}</p>
-        {% if status_code %}
-            <p>Código HTTP: {{ status_code }}</p>
-        {% endif %}
+    <div class="container">
+        <h1>Status do Site</h1>
+        <div class="status {% if http_code == 200 %}success{% else %}error{% endif %}">
+            <p>Url: {{ url }}</p>
+            <p>Status: {{ status }}</p>
+            <p>Código http: {{ http_code }}</p>
+            {% if status_code %}
+                <p>Código HTTP: {{ status_code }}</p>
+            {% endif %}
+        </div>
     </div>
 </body>
 </html>
