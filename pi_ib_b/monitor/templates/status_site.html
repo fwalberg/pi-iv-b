@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Status da url</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .status {
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        .status.success {
+            color: green;
+        }
+        .status.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Status do Site</h1>
+    <div class="status {% if http_code == 200 %}success{% else %}error{% endif %}">
+        <p>Url: {{ url }}</p>
+        <p>Status: {{ status }}</p>
+        <p>Código http: {{ http_code }}</p>
+        {% if status_code %}
+            <p>Código HTTP: {{ status_code }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

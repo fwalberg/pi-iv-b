@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .botoes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .botao {
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .botao:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+    <div class="home">
+        <h1>Site Monitor</h1>
+    </div>
+    <div class="botoes">
+        <a href="http://146.235.37.219:8000/monitoramento/status/" class="botao">Status Web</a>
+        <a href="http://146.235.37.219:8000/monitoramento/api/status" class="botao">Status JSON</a>
+    </div>
+</html>
